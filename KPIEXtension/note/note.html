@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ghi chú</title>
+    <link rel="stylesheet" href="note.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>📋 Ghi chú</h1>
+        <div class="input-area">
+            <textarea id="noteInput" placeholder="Viết ghi chú ở đây..."></textarea>
+            <div id="imagePreview"></div>
+            <input type="file" id="imageInput" accept="image/*" />
+            <div class="button-group">
+                <button id="addBtn">Thêm ghi chú</button>
+                <button id="clearAllBtn" class="danger">Xóa tất cả</button>
+            </div>
+        </div>
+        <div id="notesContainer" class="notes-container"></div>
+    </div>
+    <script src="../utils.js"></script>
+    <script src="note.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.step img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+}
+
+.step p {
+    font-size: 18px;
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.6;
+}

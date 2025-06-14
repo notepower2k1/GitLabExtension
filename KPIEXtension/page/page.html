@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Danh sách task</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="page.css">
+
+    <script src="../utils.js"></script>
+    <script src="page.js" defer></script>
+</head>
+
+<body>
+    <div class="button-container">
+        <button id="deleteAllTaskBtn">🗑️ Xóa toàn bộ Task</button>
+        <button id="exportCSVBtn">📁 Xuất CSV</button>
+        <button id="getDetailBtn">📊 Thống kê</button>
+    </div>
+    <div class="filter-container">
+        <label for="weekdaySelect">📅 Lọc theo theo ngày trong tuần:</label>
+        <select id="weekdaySelect">
+            <option value="">-- Tất cả --</option>
+        </select>
+
+        <div id="allTaskContainer"></div>
+    </div>
+    <div id="spinner" class="loading-spinner"></div>
+    <div id="kpiContainer" class="section"></div>
+    <div id="kpiStatsContainer" class="section"></div>
+</body>
+
+</html>

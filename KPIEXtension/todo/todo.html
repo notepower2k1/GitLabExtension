@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="todo.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>📝 Daily ToDo List</h1>
+        <div class="input-group">
+            <input type="text" id="todo-input" placeholder="Nhập công việc..." />
+            <input type="datetime-local" id="deadline-input" />
+
+            <div class="settings-group">
+                <label>
+                    ⏰ Nhắc trước (phút)
+                    <input type="number" id="reminder-before" min="1" value="30">
+                </label>
+                <label>
+                    🔁 Lặp lại sau (phút)
+                    <input type="number" id="reminder-repeat" min="1" value="10">
+                </label>
+            </div>
+                <button id="save-settings">💾 Lưu cài đặt</button>
+
+            <button id="add-btn">➕ Thêm todo</button>
+            <button id="clear-btn" class="danger">🗑️ Xóa tất cả</button>
+        </div>
+
+
+        <div id="todo-list"></div>
+    </div>
+    <script src="../utils.js"></script>
+    <script src="todo.js"></script>
+</body>
+
+</html>

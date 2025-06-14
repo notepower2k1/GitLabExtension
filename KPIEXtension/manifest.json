@@ -1,0 +1,45 @@
+{
+    "manifest_version": 3,
+    "name": "Gitlab Extension",
+    "version": "1.0.5",
+    "description": "Extension tiện ích cho công việc",
+    "permissions": [
+        "tabs",
+        "scripting",
+        "storage",
+        "notifications",
+        "alarms"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://gitlab.widosoft.com/*/-/issues/*"
+            ],
+            "js": [
+                "utils.js",
+                "content.js"
+            ]
+        }
+    ],
+    "icons": {
+        "16": "icon16.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "icon16.png",
+            "32": "icon32.png"
+        },
+        "default_title": "Gitlab Extension",
+        "default_popup": "popup/popup.html"
+    },
+    "author": "Thạch Đẹp trai 102"
+}

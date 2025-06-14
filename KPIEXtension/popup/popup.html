@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Extension Login</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <!-- Màn hình đăng nhập -->
+    <div id="login-screen">
+        <img src="../icon128.png" alt="Logo" id="logo" />
+        <h2>Đăng nhập</h2>
+        <input type="text" id="token" placeholder="Nhập token của bạn" />
+        <button id="login-btn">Login</button>
+        <button id="tutorial-btn" class="secondary-btn">Hướng dẫn sử dụng</button>
+    </div>
+
+    <!-- Màn hình sau khi đăng nhập -->
+    <div id="user-screen" style="display: block; position: relative;">
+        <button id="logout-btn" title="Đăng xuất">↩</button>
+
+        <!-- Thanh tab -->
+        <div class="tab-nav">
+            <button class="tab-btn active" data-tab="main-tab">Tổng quan</button>
+            <button class="tab-btn" data-tab="tools-tab">Khác</button>
+        </div>
+
+        <!-- Nội dung Tab 1 -->
+        <div id="main-tab" class="tab-content active">
+            <div class="user-profile">
+                <a id="avatar-link" href="#" target="_blank">
+                    <img id="avatar" src="" alt="Avatar" class="avatar clickable">
+                </a>
+                <h3 id="username">thach.nguyen</h3>
+            </div>
+
+            <div class="stats-box" id="stats-box">
+                <h4 style="color: orange;"><strong>Thống kê</strong></h4>
+                <p><strong>Lần cuối cập nhật: </strong> <span id="stats-time"></span></p>
+                <p><strong>Tổng số task: </strong><span id="total-tasks"></span></p>
+                <p><strong>Thời gian estimate: </strong><span id="estimate-time"></span> giờ</p>
+                <p><strong>Thời gian đã dùng: </strong><span id="spent-time"></span> giờ</p>
+                <p><strong>Tiến trình tuần: </strong><span id="estimate-time-total"></span></p>
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill">
+                        <span id="progress-text"></span>
+                    </div>
+                </div>
+                <p><strong>Tiến trình ngày: </strong><span id="estimate-time-daily"></span></p>
+                <div class="progress-bar">
+                    <div id="progress-fill-daily" class="progress-fill">
+                        <span id="progress-text-daily"></span>
+                    </div>
+                </div>
+            </div>
+
+            <button id="manage-btn">Quản lý 📊</button>
+        </div>
+
+        <!-- Nội dung Tab 2 -->
+        <div id="tools-tab" class="tab-content">
+            <div class="stats-box" id="storage-box">
+                <h4 style="color: aqua;">Bộ nhớ lưu trữ</h4>
+                <p><strong>Đã sử dụng: </strong><span id="used-bytes"></span> KB</p>
+                <p><strong>Dung lượng tối đa: </strong><span id="max-bytes"></span> KB</p>
+            </div>
+
+            <button id="note-btn">Ghi chú 📋</button>
+            <button id="todo-btn">Việc cần làm 📝</button>
+            <button id="exportTask-btn">Export task 💿</button>
+            <button id="importTask-btn">Import task 📀</button>
+            <input type="file" id="importFile" style="display: none" />
+        </div>
+    </div>
+
+    <script src="../utils.js"></script>
+    <script src="popup.js"></script>
+</body>
+
+</html>

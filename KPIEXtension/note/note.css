@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.note-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px);
+    position: relative;
+}
+
+.note-card p {
+    margin: 0;
+    color: #333;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.note-time {
+    display: block;
+    margin-top: 10px;
+    color: #666;
+    font-size: 13px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+button.danger {
+    background-color: #dc3545;
+}
+
+button.danger:hover {
+    background-color: #a71d2a;
+}
+
+
+#imagePreview img {
+    max-width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.note-image {
+    margin-top: 10px;
+    max-width: 100%;
+    border-radius: 8px;
+}
